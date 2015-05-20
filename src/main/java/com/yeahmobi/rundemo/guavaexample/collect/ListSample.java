@@ -21,13 +21,16 @@ public class ListSample {
 		
 		//3.使用Guava，可以进一步简化：
 		List<String> strList3 = Lists.newArrayList("1", "2", "3");
+		System.out.println("strList3: "+ strList3);
 		
-		
+		//4.List的常用方法
 		List<Integer> countUp = Ints.asList(1, 2, 3, 4, 5);
 		System.out.println(countUp);
 		List<Integer> countDown = Lists.reverse(countUp); // {5, 4, 3, 2, 1}
 		System.out.println(countDown);
 		List<List<Integer>> parts = Lists.partition(countUp, 2); // {{1, 2}, {3, 4}, {5}}
 		System.out.println(parts);
+		
+		
 	}
 }
