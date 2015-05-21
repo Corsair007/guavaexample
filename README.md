@@ -10,3 +10,5 @@ Guava是Google的一个开源类库，丰富了JDK的API，且使用起来很方
 	<version>18.0</version>
 </dependency>
 
+#参考
+https://code.google.com/p/guava-libraries/wiki/GuavaExplained
