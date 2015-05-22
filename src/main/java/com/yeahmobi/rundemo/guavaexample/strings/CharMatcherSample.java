@@ -1,7 +1,5 @@
 package com.yeahmobi.rundemo.guavaexample.strings;
 
-import java.util.Iterator;
-
 import com.google.common.base.CharMatcher;
 
 public class CharMatcherSample {
@@ -29,12 +27,13 @@ public class CharMatcherSample {
 		String lowerAndDigit = CharMatcher.JAVA_DIGIT.or(CharMatcher.JAVA_LOWER_CASE).retainFrom(string);
 		System.out.println("CharMatcher.JAVA_DIGIT.or(CharMatcher.JAVA_LOWER_CASE).retainFrom:   "+ lowerAndDigit);
 		/**
-		 * 1.print result:
-		 * 2.CharMatcher.JAVA_ISO_CONTROL.removeFrom:                             123abc 456 -- jkl
-		 * 3.CharMatcher.DIGIT.retainFrom:                                        123456
-		 * 4.CharMatcher.WHITESPACE.trimAndCollapseFrom:                          123abc 456 -- jkl
-		 * 5.CharMatcher.JAVA_DIGIT.replaceFrom:                                  ***abc *** -- jkl
-		 * 6.CharMatcher.JAVA_DIGIT.or(CharMatcher.JAVA_LOWER_CASE).retainFrom:   123abc456jkl
+		 * print result:
+		 * 
+		 * 1.CharMatcher.JAVA_ISO_CONTROL.removeFrom:                             123abc 456 -- jkl
+		 * 2.CharMatcher.DIGIT.retainFrom:                                        123456
+		 * 3.CharMatcher.WHITESPACE.trimAndCollapseFrom:                          123abc 456 -- jkl
+		 * 4.CharMatcher.JAVA_DIGIT.replaceFrom:                                  ***abc *** -- jkl
+		 * 5.CharMatcher.JAVA_DIGIT.or(CharMatcher.JAVA_LOWER_CASE).retainFrom:   123abc456jkl
 		 * 
 		*/
 	}

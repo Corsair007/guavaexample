@@ -4,6 +4,7 @@ import java.util.Iterator;
 
 import com.google.common.base.CharMatcher;
 import com.google.common.base.Splitter;
+import static com.yeahmobi.rundemo.guavaexample.utils.PrintUtils.*;
 
 public class SplitterSample {
 	public static void main(String[] args) {
@@ -36,12 +37,4 @@ public class SplitterSample {
 		print(result7);
 	}
 	
-	public static void print(Iterator<String> result){
-		System.out.println("-------------------------华丽丽的分割线---------------------------");
-		while (result.hasNext()) {
-			String string = result.next();
-			System.out.println(string);
-		}
-		System.out.println();
-	}
 }

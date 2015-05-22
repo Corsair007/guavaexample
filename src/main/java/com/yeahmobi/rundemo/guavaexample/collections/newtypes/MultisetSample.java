@@ -1,4 +1,4 @@
-package com.yeahmobi.rundemo.guavaexample.collect;
+package com.yeahmobi.rundemo.guavaexample.collections.newtypes;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -7,7 +7,7 @@ import java.util.List;
 import com.google.common.collect.Lists;
 import com.google.common.primitives.Ints;
 
-public class ListsSample {
+public class MultisetSample {
 	public static void main(String[] args) {
 		//1.一般情况下，我们创建一个List集合
 		List<String> strList1 = new ArrayList<String>();

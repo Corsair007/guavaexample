@@ -6,9 +6,9 @@ import com.google.common.base.Charsets;
 
 public class CharsetsSample {
 	public static void main(String[] args) {
-		//字符格式
+		//Charsets有很多字符格式，如：UTF_8, UTF_16, UTF_16LE, UTF_16BE, ISO_8859_1, US_ASCII
 		String string = "123abc 456 -- jkl";
-		byte[] bytes = string.getBytes(Charsets.UTF_8);
+		string.getBytes(Charsets.UTF_8);
 		
 		String result = CaseFormat.UPPER_UNDERSCORE.to(CaseFormat.LOWER_CAMEL, "CONSTANT_NAME"); // returns "constantName"
 		System.out.println(result);
