@@ -4,9 +4,13 @@ import java.util.Arrays;
 
 import com.google.common.base.Joiner;
 
+/**
+ * @rundemo_name 字符串拼接
+ * @author root
+ *
+ */
 public class JoinerSample {
 	public static void main(String[] args) {
-		//自定义字符串拼接
 		
 		String result1 = Joiner.on("; ").skipNulls().join("Harry", null, "Ron", "Hermione");
 		System.out.println(result1);

@@ -7,6 +7,11 @@ import java.util.List;
 import com.google.common.collect.Lists;
 import com.google.common.primitives.Ints;
 
+/**
+ * @rundemo_name Lists用法
+ * @author root
+ *
+ */
 public class ListsSample {
 	public static void main(String[] args) {
 		//1.一般情况下，我们创建一个List集合

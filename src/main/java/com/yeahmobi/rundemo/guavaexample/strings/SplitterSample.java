@@ -6,6 +6,11 @@ import com.google.common.base.CharMatcher;
 import com.google.common.base.Splitter;
 import static com.yeahmobi.rundemo.guavaexample.utils.PrintUtils.*;
 
+/**
+ * @rundemo_name 字符串分割
+ * @author root
+ *
+ */
 public class SplitterSample {
 	public static void main(String[] args) {
 		//1.字符串分割		

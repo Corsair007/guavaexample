@@ -2,9 +2,13 @@ package com.yeahmobi.rundemo.guavaexample.strings;
 
 import com.google.common.base.CharMatcher;
 
+/**
+ * @rundemo_name 字符串匹配操作
+ * @author root
+ *
+ */
 public class CharMatcherSample {
 	public static void main(String[] args) {
-		//字符匹配
 		String string = "123abc 456 -- jkl";
 		
 		//1. remove control characters

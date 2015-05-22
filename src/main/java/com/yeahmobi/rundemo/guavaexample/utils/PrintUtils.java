@@ -2,6 +2,11 @@ package com.yeahmobi.rundemo.guavaexample.utils;
 
 import java.util.Iterator;
 
+/**
+ * @rundemo_name 信息打印工具
+ * @author root
+ *
+ */
 public class PrintUtils {
 	
 	public static void print(Iterator<String> result){

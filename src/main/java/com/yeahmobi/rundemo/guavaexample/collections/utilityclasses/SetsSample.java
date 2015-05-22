@@ -7,6 +7,11 @@ import com.google.common.collect.Sets;
 import com.google.common.collect.Sets.SetView;
 import static com.yeahmobi.rundemo.guavaexample.utils.PrintUtils.*;
 
+/**
+ * @rundemo_name Sets用法
+ * @author root
+ *
+ */
 public class SetsSample {
 	public static void main(String[] args) {
 		
