@@ -17,60 +17,61 @@ import static com.yeahmobi.rundemo.guavaexample.utils.PrintUtils.*;
 
 public class MultiMapSample {
 	public static void main(String[] args) {
-		 Multimap<String, String> myMultimap = ArrayListMultimap.create();
+		Multimap<String, String> myMultimap = ArrayListMultimap.create();
 
-		    //1. Adding some key/value
-		    myMultimap.put("Fruits", "Bannana");
-		    myMultimap.put("Fruits", "Apple");
-		    myMultimap.put("Fruits", "Pear");
-		    myMultimap.put("Fruits", "Pear");
-		    myMultimap.put("Vegetables", "Carrot");
+		// 1. Adding some key/value
+		myMultimap.put("Fruits", "Bannana");
+		myMultimap.put("Fruits", "Apple");
+		myMultimap.put("Fruits", "Pear");
+		myMultimap.put("Fruits", "Pear");
+		myMultimap.put("Vegetables", "Carrot");
 
-		    dividingLine();
-		    
-		    //2. Getting the size
-		    int size = myMultimap.size();
-		    System.out.println(size); // 5
-		    
-		    dividingLine();
-		    
-		    //3. Getting values
-		    /**
-		     * get方法返回的是一个collection而不是list，这是因为collection会更加有用。
-		     * 如果你需要基于multimap直接操作list或者set，那么可以使用在定义类型的时候使用子类名称：
-		    * ListMultimap，SetMultimap和SortedSetMultimap。
-		     */
-		    Collection<String> fruits = myMultimap.get("Fruits");
-		    System.out.println(fruits); //  [Bannana, Apple, Pear, Pear]
-		    System.out.println(ImmutableSet.copyOf(fruits));// [Bannana, Apple, Pear]
-		    // Set<Foo> set = Sets.newHashSet(list);
-		    // Set<Foo> foo = new HashSet<Foo>(myList);
+		dividingLine();
 
-		    dividingLine();
-		    
-		    Collection<String> vegetables = myMultimap.get("Vegetables");
-		    System.out.println(vegetables); // [Carrot]
+		// 2. Getting the size
+		int size = myMultimap.size();
+		System.out.println(size); // 5
 
-		    dividingLine();
-		    
-		    //4. Iterating over entire Mutlimap
-		    for (String value : myMultimap.values()) {
-		      System.out.println(value);
-		    }
+		dividingLine();
 
-		    dividingLine();
-		    
-		    //5. Removing a single value
-		    myMultimap.remove("Fruits", "Pear");
-		    System.out.println(myMultimap.get("Fruits")); // [Bannana, Apple, Pear]
+		// 3. Getting values
+		/**
+		 * get方法返回的是一个collection而不是list，这是因为collection会更加有用。
+		 * 如果你需要基于multimap直接操作list或者set，那么可以使用在定义类型的时候使用子类名称：
+		 * ListMultimap，SetMultimap和SortedSetMultimap。
+		 */
+		Collection<String> fruits = myMultimap.get("Fruits");
+		System.out.println(fruits); // [Bannana, Apple, Pear, Pear]
+		System.out.println(ImmutableSet.copyOf(fruits));// [Bannana, Apple,
+														// Pear]
+		// Set<Foo> set = Sets.newHashSet(list);
+		// Set<Foo> foo = new HashSet<Foo>(myList);
 
-		    dividingLine();
-		    
-		    //6. Remove all values for a key
-		    myMultimap.removeAll("Fruits");
-		    System.out.println(myMultimap.get("Fruits")); // [] (Empty Collection!)
-		    
-		    //
+		dividingLine();
+
+		Collection<String> vegetables = myMultimap.get("Vegetables");
+		System.out.println(vegetables); // [Carrot]
+
+		dividingLine();
+
+		// 4. Iterating over entire Mutlimap
+		for (String value : myMultimap.values()) {
+			System.out.println(value);
+		}
+
+		dividingLine();
+
+		// 5. Removing a single value
+		myMultimap.remove("Fruits", "Pear");
+		System.out.println(myMultimap.get("Fruits")); // [Bannana, Apple, Pear]
+
+		dividingLine();
+
+		// 6. Remove all values for a key
+		myMultimap.removeAll("Fruits");
+		System.out.println(myMultimap.get("Fruits")); // [] (Empty Collection!)
+
+		//
 	}
-	
+
 }
