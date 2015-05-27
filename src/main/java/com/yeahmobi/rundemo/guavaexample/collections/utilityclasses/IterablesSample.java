@@ -8,6 +8,11 @@ import java.util.List;
 import com.google.common.collect.Iterables;
 import com.google.common.primitives.Ints;
 
+/**
+ * @rundemo_name 支持所有集合的Iterables工具类
+ * @author root
+ *
+ */
 public class IterablesSample {
 
 	@SuppressWarnings({ "unchecked", "rawtypes"})
@@ -17,6 +22,7 @@ public class IterablesSample {
 		Ints.asList(1, 2, 4),
 		Ints.asList(4, 5, 6, 7, 8, 9));
 		// concatenated has elements 1, 2, 4, 4, 5, 6
+		print("concatenated内容", concatenated);
 		
 		//2.返回concatenated中4出现的次数，这里是2次
 		int count = Iterables.frequency(concatenated, 4);

@@ -3,7 +3,7 @@ package com.yeahmobi.rundemo.guavaexample.utils;
 import java.util.Iterator;
 
 /**
- * @rundemo_name 信息打印工具
+ * @rundemo_name 信息输出
  * @author root
  *
  */
@@ -20,5 +20,11 @@ public class PrintUtils {
 	
 	public static void print(String desc, Object result){
 		System.out.println(desc + " : " + result);
+	}
+	
+	public static void dividingLine(){
+		System.out.println();
+		System.out.println("-------------------------华丽丽的分割线-----------------------------");
+		System.out.println();
 	}
 }

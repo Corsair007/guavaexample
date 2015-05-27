@@ -3,7 +3,7 @@ package com.yeahmobi.rundemo.guavaexample.strings;
 import com.google.common.base.CharMatcher;
 
 /**
- * @rundemo_name 字符串匹配操作
+ * @rundemo_name 字符匹配器
  * @author root
  *
  */

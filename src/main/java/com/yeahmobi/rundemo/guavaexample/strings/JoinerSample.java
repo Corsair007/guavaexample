@@ -5,7 +5,7 @@ import java.util.Arrays;
 import com.google.common.base.Joiner;
 
 /**
- * @rundemo_name 字符串拼接
+ * @rundemo_name 字符连接器
  * @author root
  *
  */

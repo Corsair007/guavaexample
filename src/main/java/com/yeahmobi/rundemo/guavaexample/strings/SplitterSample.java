@@ -7,7 +7,7 @@ import com.google.common.base.Splitter;
 import static com.yeahmobi.rundemo.guavaexample.utils.PrintUtils.*;
 
 /**
- * @rundemo_name 字符串分割
+ * @rundemo_name 字符分割器
  * @author root
  *
  */

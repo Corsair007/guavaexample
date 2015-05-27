@@ -1,11 +1,13 @@
 package com.yeahmobi.rundemo.guavaexample.collections.utilityclasses;
 
+import static com.yeahmobi.rundemo.guavaexample.utils.PrintUtils.print;
+
+import java.util.List;
 import java.util.Set;
 
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
 import com.google.common.collect.Sets.SetView;
-import static com.yeahmobi.rundemo.guavaexample.utils.PrintUtils.*;
 
 /**
  * @rundemo_name Sets用法
@@ -36,5 +38,15 @@ public class SetsSample {
 		SetView<String> intersection = Sets.intersection(primes, wordsWithPrimeLength); // contains "two", "three", "seven"
 		// I can use intersection as a Set directly, but copying it can be more efficient if I use it a lot.
 		print("intersection结果", intersection.immutableCopy());
+		
+		Set<String> animals = ImmutableSet.of("gerbil", "hamster");
+		Set<String> fruits = ImmutableSet.of("apple", "orange", "banana");
+		//5.返回两集合的笛卡尔集
+		@SuppressWarnings("unchecked")
+		Set<List<String>> product = Sets.cartesianProduct(animals, fruits);
+		print("cartesianProduct结果", product);
+		//6.返回集合的所有子集
+		Set<Set<String>> animalSets = Sets.powerSet(animals);
+		print("powerSet结果", animalSets);
 	}
 }
