@@ -10,7 +10,7 @@ import com.google.common.collect.Multiset;
 import static com.yeahmobi.rundemo.guavaexample.utils.PrintUtils.*;
 
 /**
- * @rundemo_name 新集合之MultiMap
+ * @rundemo_name 新集合之MultiSet
  * @desc Multiset和Set的区别就是可以保存多个相同的对象，允许重复，但不保证顺序
  * @author root
  *

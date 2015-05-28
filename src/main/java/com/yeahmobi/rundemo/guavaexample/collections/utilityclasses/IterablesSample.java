@@ -9,7 +9,8 @@ import com.google.common.collect.Iterables;
 import com.google.common.primitives.Ints;
 
 /**
- * @rundemo_name 支持所有集合的Iterables工具类
+ * @rundemo_name 集合工具类之Iterables用法
+ * @desc 让实现和扩展集合类变得更容易，比如创建Collection的装饰器，或实现迭代器
  * @author root
  *
  */

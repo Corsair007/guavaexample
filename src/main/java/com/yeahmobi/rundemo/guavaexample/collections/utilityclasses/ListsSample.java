@@ -8,7 +8,7 @@ import com.google.common.collect.Lists;
 import com.google.common.primitives.Ints;
 
 /**
- * @rundemo_name Lists用法
+ * @rundemo_name 集合工具类之Lists用法
  * @author root
  *
  */

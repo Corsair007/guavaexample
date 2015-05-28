@@ -16,7 +16,7 @@ import static com.yeahmobi.rundemo.guavaexample.utils.PrintUtils.*;
 
 
 /**
- * @rundemo_name Maps用法
+ * @rundemo_name 集合工具类之Maps用法
  * @author root
  *
  */

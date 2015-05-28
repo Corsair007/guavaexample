@@ -11,17 +11,28 @@ package com.yeahmobi.rundemo.guavaexample.collections.newtypes;
 public class RangeSetSample {
 
 	public static void main(String[] args) {
-		/*RangeSet<Integer> rangeSet = TreeRangeSet.create();
-		rangeSet.add(Range.closed(1, 10));
-		System.out.println("rangeSet:" + rangeSet);
-		rangeSet.add(Range.closedOpen(11, 15));
-		System.out.println("rangeSet:" + rangeSet);
-		rangeSet.add(Range.open(15, 20));
-		System.out.println("rangeSet:" + rangeSet);
-		rangeSet.add(Range.openClosed(0, 0));
-		System.out.println("rangeSet:" + rangeSet);
-		rangeSet.remove(Range.open(5, 10));
-		System.out.println("rangeSet:" + rangeSet);*/
+		/*RangeSet rangeSet = TreeRangeSet.create();
+
+		rangeSet.add(Ranges.closed(1, 10));
+
+		System.out.println(rangeSet);
+
+		rangeSet.add(Ranges.closedOpen(11, 15));
+
+		System.out.println(rangeSet);
+
+		rangeSet.add(Ranges.open(15, 20));
+
+		System.out.println(rangeSet);
+
+		rangeSet.add(Ranges.openClosed(0, 0));
+
+		System.out.println(rangeSet);
+
+		rangeSet.remove(Ranges.open(5, 10));
+
+		System.out.println(rangeSet);*/
+
 	}
 
 }
