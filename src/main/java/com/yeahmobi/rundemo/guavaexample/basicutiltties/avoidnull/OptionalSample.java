@@ -6,8 +6,11 @@ import com.google.common.base.Optional;
 import com.google.common.collect.Lists;
 
 import static com.yeahmobi.rundemo.guavaexample.utils.PrintUtils.*;
+
 /**
  * @rundemo_name NULL值的处理
+ * @desc Optional用于包含非空对象的不可变对象。
+ *       Optional对象，用于不存在值表示null。这个类有各种实用的方法，以方便代码来处理为可用或不可用，而不是检查null值。
  * @author root
  *
  */
@@ -17,16 +20,16 @@ public class OptionalSample {
 		Integer value1 = null;
 		Integer value2 = new Integer(10);
 		// Optional.fromNullable - allows passed parameter to be null.
-		//创建指定引用的Optional实例，若引用为null则表示缺失
+		// 创建指定引用的Optional实例，若引用为null则表示缺失
 		Optional<Integer> a = Optional.fromNullable(value1);
 		// Optional.of - throws NullPointerException if passed parameter is null
-		//创建指定引用的Optional实例，若引用为null则快速失败
+		// 创建指定引用的Optional实例，若引用为null则快速失败
 		Optional<Integer> b = Optional.of(value2);
-		
-		print("value1+value2 ", sum(a,b));
-		
+
+		print("value1+value2 ", sum(a, b));
+
 		dividingLine();
-		
+
 		// 通常处理null的方法
 		oldTreatmentMethod();
 		// Optional处理方法
@@ -52,22 +55,22 @@ public class OptionalSample {
 		 * 但是没有判断isPresent()是否存在，就直接get这是会抛异常的，这属于乱用Optional情况，和直接用Null并没什么差别。
 		 */
 	}
-	
-	 public static Integer sum(Optional<Integer> a, Optional<Integer> b){
-	      //Optional.isPresent - checks the value is present or not
-	      System.out.println("First parameter is present: " + a.isPresent());
 
-	      System.out.println("Second parameter is present: " + b.isPresent());
+	public static Integer sum(Optional<Integer> a, Optional<Integer> b) {
+		// Optional.isPresent - checks the value is present or not
+		System.out.println("First parameter is present: " + a.isPresent());
 
-	      //Optional.or - returns the value if present otherwise returns
-	      //the default value passed.
-	      Integer value1 = a.or(new Integer(0));	
+		System.out.println("Second parameter is present: " + b.isPresent());
 
-	      //Optional.get - gets the value, value should be present
-	      Integer value2 = b.get();
+		// Optional.or - returns the value if present otherwise returns
+		// the default value passed.
+		Integer value1 = a.or(new Integer(0));
 
-	      return value1 + value2;
-	   }	
+		// Optional.get - gets the value, value should be present
+		Integer value2 = b.get();
+
+		return value1 + value2;
+	}
 
 	public static void oldTreatmentMethod() throws Exception {
 		List<Employee> list = Lists.newArrayList(new Employee("em1", 30),
@@ -78,7 +81,7 @@ public class OptionalSample {
 				sum += employee.getAge();
 			}
 		}
-		print("oldTreatmentMethod",Integer.valueOf(sum));
+		print("oldTreatmentMethod", Integer.valueOf(sum));
 	}
 
 	public static void testOptional() throws Exception {
@@ -89,7 +92,7 @@ public class OptionalSample {
 			sum += Optional.fromNullable(employee).or(new Employee("dummy", 0))
 					.getAge();
 		}
-		print("testOptional",Integer.valueOf(sum));
+		print("testOptional", Integer.valueOf(sum));
 	}
 
 	static class Employee {
