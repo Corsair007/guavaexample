@@ -1,13 +1,12 @@
 package com.yeahmobi.rundemo.guavaexample.collections.utilityclasses;
 
-import static com.yeahmobi.rundemo.guavaexample.utils.PrintUtils.print;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import com.google.common.collect.Iterables;
 import com.google.common.primitives.Ints;
 
+import static com.yeahmobi.rundemo.guavaexample.utils.PrintUtils.print;
 /**
  * @rundemo_name 集合工具类之Iterables用法
  * @desc 让实现和扩展集合类变得更容易，比如创建Collection的装饰器，或实现迭代器
