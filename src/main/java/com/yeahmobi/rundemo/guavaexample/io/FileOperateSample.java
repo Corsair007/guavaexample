@@ -12,6 +12,11 @@ import com.google.common.base.Preconditions;
 import com.google.common.io.Files;
 import com.google.common.io.LineProcessor;
 
+/**
+ * @rundemo_name 文件操作工具类Files
+ * @author root
+ *
+ */
 public class FileOperateSample {
 
 	public static void main(String[] args) throws IOException {
@@ -31,6 +36,11 @@ public class FileOperateSample {
 		demoEqual("test.txt", "testTargetFile.txt");
 		demoEqual("test.txt", "pom.xml");
 		
+		//Files.deleteDirectoryContents(File directory); //删除文件夹下的内容(包括文件与子文件夹)
+		//Files.deleteRecursively(File file); //删除文件或者文件夹
+		//Files.move(File from, File to); //移动文件
+
+		
 		/**
 		 * 6. 其他有用的方法
 		 * 
@@ -43,7 +53,6 @@ public class FileOperateSample {
 		 * checksum hash(File)获得文件的hash
 		 * map系列方法获得文件的内存映射 
 		 * getFileExtension(String)获得文件的扩展名
-		 * getNameWithoutExtension(String file)获得不带扩展名的文件名
 		 */
 		dividingLine();
 		print("获得文件的扩展名", Files.getFileExtension("pom.xml"));

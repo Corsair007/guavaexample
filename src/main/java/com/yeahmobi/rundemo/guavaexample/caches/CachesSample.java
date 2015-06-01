@@ -14,7 +14,7 @@ import com.google.common.cache.RemovalListener;
 import com.google.common.cache.RemovalNotification;
 
 /**
- * @rundemo_name 缓存工具
+ * @rundemo_name 缓存管理
  * @desc 
  *       Guava通过接口LoadingCache提供了一个非常强大的基于内存的LoadingCache<K，V>。在缓存中自动加载值，它提供了许多实用的方法
  *       ，在有缓存需求时非常有用。
