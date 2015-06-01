@@ -1,5 +1,6 @@
 package com.yeahmobi.rundemo.guavaexample.collections.extensionutils;
 
+
 public class ForwardingDecoratorsSample {
 
 	/**
@@ -10,7 +11,6 @@ public class ForwardingDecoratorsSample {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 	}
 
