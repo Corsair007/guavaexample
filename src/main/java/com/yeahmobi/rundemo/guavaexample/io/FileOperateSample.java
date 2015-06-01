@@ -1,8 +1,5 @@
 package com.yeahmobi.rundemo.guavaexample.io;
 
-import static com.yeahmobi.rundemo.guavaexample.utils.PrintUtils.dividingLine;
-import static com.yeahmobi.rundemo.guavaexample.utils.PrintUtils.print;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -12,6 +9,7 @@ import com.google.common.base.Preconditions;
 import com.google.common.io.Files;
 import com.google.common.io.LineProcessor;
 
+import static com.yeahmobi.rundemo.guavaexample.utils.PrintUtils.*;
 /**
  * @rundemo_name 文件操作工具类Files
  * @author root
