@@ -4,7 +4,10 @@ import static com.yeahmobi.rundemo.guavaexample.utils.PrintUtils.dividingLine;
 import static com.yeahmobi.rundemo.guavaexample.utils.PrintUtils.print;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
+import com.google.common.base.Function;
 import com.google.common.collect.Lists;
 import com.google.common.reflect.TypeToken;
 
@@ -15,6 +18,7 @@ import com.google.common.reflect.TypeToken;
  */
 public class TypeTokenSample {
 
+	@SuppressWarnings({ "serial", "unused" })
 	public static void main(String[] args) {
 		// 1.用一个例子来说明什么是类型擦除
 		// 下面声明了两个泛型的ArrayList类型，一个泛型的类型参数是String，另外一个是Integer；然后输出了两个泛型的Class，并输出两个list的类型是否是同一个list。
@@ -31,7 +35,6 @@ public class TypeTokenSample {
 		dividingLine();
 
 		// 2. TypeToken可以解决这个问题，请看下面代码：
-		@SuppressWarnings("serial")
 		TypeToken<ArrayList<String>> typeToken = new TypeToken<ArrayList<String>>() {
 		};
 		TypeToken<?> genericTypeToken = typeToken.resolveType(ArrayList.class
@@ -39,6 +42,23 @@ public class TypeTokenSample {
 		print("ArrayList<String>的泛型类型为", genericTypeToken.getType());
 		System.out.println(genericTypeToken.getRawType());
 		// 上面第一行代码使用了一个空的匿名类。第二行使用了resolveType方法解析出泛型类型，第三行代码打印出泛型类型
+		dividingLine();
+		
+		//3.获取一个基本的、原始类的TypeToken非常简单：
+
+		TypeToken<String> stringTok = TypeToken.of(String.class);
+		TypeToken<Integer> intTok = TypeToken.of(Integer.class);
+		//为获得一个含有泛型的类型的TypeToken —— 当你知道在编译时的泛型参数类型 —— 你使用一个空的匿名内部类：
+		TypeToken<List<String>> stringListTok = new TypeToken<List<String>>() {};
+		//或者你想故意指向一个通配符类型：
+		TypeToken<Map<?, ?>> wildMapTok = new TypeToken<Map<?, ?>>() {};
+		
+		//4.
+		TypeToken<Function<Integer, String>> funToken = new TypeToken<Function<Integer, String>>() {};
+		TypeToken<?> funResultToken = funToken.resolveType(Function.class.getTypeParameters()[0]);
+		System.out.println(funResultToken.getType());
+		funResultToken = funToken.resolveType(Function.class.getTypeParameters()[1]);
+		System.out.println(funResultToken.getType());
 		/**
 		 * TypeToken的其他方法如下：
 		 * 
